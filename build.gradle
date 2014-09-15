@@ -22,6 +22,7 @@ configure(allprojects) { project ->
 	ext.hsqldbVersion   = "1.8.0.10"
 	ext.junitVersion    = "4.11"
 	ext.slf4jVersion    = "1.6.6"
+	ext.portToSpringVersion	= "4.1.0.RELEASE"
 	ext.gradleScriptDir = "${rootProject.projectDir}/gradle"
 
 	apply plugin: "propdeps"
@@ -763,16 +764,16 @@ project("spring-test-mvc") {
 project("spring-struts") {
 	description = "Spring Struts"
 	dependencies {
-		compile(project(":spring-core"))
-		compile(project(":spring-beans"))
-		compile(project(":spring-context"))
-		compile(project(":spring-web"))
-		compile(project(":spring-webmvc"))
+		compile("org.springframework:spring-core:${portToSpringVersion}")
+		compile("org.springframework:spring-beans:${portToSpringVersion}")
+		compile("org.springframework:spring-context:${portToSpringVersion}")
+		compile("org.springframework:spring-web:${portToSpringVersion}")
 		compile("struts:struts:1.2.9")
+		compile("org.springframework:spring-webmvc:${portToSpringVersion}")
 		compile("commons-beanutils:commons-beanutils:1.7.0")
-		provided("javax.servlet:servlet-api:2.5")
+		provided("javax.servlet:javax.servlet-api:3.0.1")
 		provided("javax.servlet:jstl:1.2")
-		testCompile(project(":spring-test"))
+		testCompile("org.springframework:spring-test:${portToSpringVersion}")
 	}
 }
 
