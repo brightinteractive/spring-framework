@@ -763,6 +763,7 @@ project("spring-test-mvc") {
 
 project("spring-struts") {
 	description = "Spring Struts"
+	version = qualifyVersionIfNecessary("3.2.11.BRIGHT.1")
 	dependencies {
 		compile("org.springframework:spring-core:${portToSpringVersion}")
 		compile("org.springframework:spring-beans:${portToSpringVersion}")
