@@ -1,3 +1,26 @@
+## Port of spring-struts to Spring 4.1.x
+
+## Building spring-struts from source
+
+Dependencies: gradle (I used 1.11) and Java 7.
+
+N.B. I experienced build failures when using Java 8, which I resolved by using Java 7 instead:
+
+    export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home
+
+### check out sources
+
+    git clone git@github.com:brightinteractive/spring-framework.git
+    git checkout 3.2.x-port-spring-struts-to-run-on-4.1.x
+
+### install jars to your local Maven cache
+
+`./gradlew :spring-struts:install`
+
+*END of spring-struts port to Spring 4.1.x instructions, standard Spring
+ README starts here*
+
+
 ## Spring Framework
 The Spring Framework provides a comprehensive programming and configuration
 model for modern Java-based enterprise applications - on any kind of deployment
